@@ -14,3 +14,4 @@ Vko 1 materiaalin läpi käyminen ensimmäisiin tehtäviin asti 1 h 45 min.
 Tehtävät 1,2 (html, css, lomakkeet) skippasin, suht tuttua kamaa.
 Tehtävä 3-6: 45 min. Hyviä tehtäviä, tulee käytyä läpi prosessit/sekvenssit ja tuli myös websequencediagram-työkalu tutuksi.
 
+Materiaalin React-osuus - alkamassa
