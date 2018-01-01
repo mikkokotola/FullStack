@@ -1,5 +1,5 @@
-## Full Stack Development, betaversio 12/2017-1/2018
-## Suoritusloki (ajankäyttö ja kommentteja)
+### Full Stack Development, betaversio 12/2017-1/2018
+### Suoritusloki (ajankäyttö ja kommentteja)
 Mikko Kotola
 
 __Vko 1__
