@@ -14,35 +14,36 @@ _Ajankäyttö ja tarkemmat kommentit_
 
 Työkalut kuntoon (Node, Visual Studio Code, Create-react-app): 5 h.
 
-   Nodea ja VSC:tä ei ole opiskelijoiden koneilla esiasennettuna ja 2017 fuksiläppäreissä käyttäjillä ei ole oletusarvoisesti sudoja. Laitoin cs:n it-tukeen ehdotuksen näiden lisäämisestä esiasennuspakettiin. Kävin keskustelemassa Jani Jaakkolan kanssa to 4.1. ja hän auttoi asennuksissa. Lupasi keskustella Matin kanssa tarvittavien ohjelmien asentamisesta fuksiläppäreille ennen kurssin alkua. Tämänkin jälkeen oli vielä säätöä, mutta sain lopulta työkalut toimimaan (vaati lopulta sudojen käyttöä).
+  *Nodea ja VSC:tä ei ole opiskelijoiden koneilla esiasennettuna ja 2017 fuksiläppäreissä käyttäjillä ei ole oletusarvoisesti sudoja. Laitoin cs:n it-tukeen ehdotuksen näiden lisäämisestä esiasennuspakettiin. Kävin keskustelemassa Jani Jaakkolan kanssa to 4.1. ja hän auttoi asennuksissa. Lupasi keskustella Matin kanssa tarvittavien ohjelmien asentamisesta fuksiläppäreille ennen kurssin alkua. Tämänkin jälkeen oli vielä säätöä, mutta sain lopulta työkalut toimimaan (vaati lopulta sudojen käyttöä).
 
 Vko 1 materiaalin läpi käyminen ensimmäisiin tehtäviin asti 1 h 45 min. 
 
-   Oli hyvin kirjoitettu ja selkeä ja kävi läpi perinteisen web-sovelluksen ja js:llä toteutetun eroja. Katsoin myös js-koodeja tarkemmin ja pyrin ymmärtämään mitä koodi tekee.
+  *Oli hyvin kirjoitettu ja selkeä ja kävi läpi perinteisen web-sovelluksen ja js:llä toteutetun eroja. Katsoin myös js-koodeja tarkemmin ja pyrin ymmärtämään mitä koodi tekee.
 
 Tehtävät 1,2 (html, css, lomakkeet) skippasin, suht tuttua kamaa.
 
 Tehtävä 3-6: 45 min. 
 
-   Hyviä tehtäviä, tulee käytyä läpi prosessit/sekvenssit ja tuli myös websequencediagram-työkalu tutuksi.
+  *Hyviä tehtäviä, tulee käytyä läpi prosessit/sekvenssit ja tuli myös websequencediagram-työkalu tutuksi.
 
 React-materiaalin eka osa 45 min
 
 Tehtävät 7-8: 30 min
 
-   Hyvää harjoitusta refaktoroinnin kautta.
+  *Hyvää harjoitusta refaktoroinnin kautta.
   
 React-materiaali: 20 min
 
 Tehtävät 9-11: 20 min
 
-   Verrattain helppoja tehtäviä - hyvää ja opettavaista harjoitusta.
+  *Verrattain helppoja tehtäviä - hyvää ja opettavaista harjoitusta.
   
 Javascript: Olioiden metodit ja this, luokat 15 min
+
 A re-introduction to JavaScript (JS tutorial): 1 h
+
 Paluu Reactin äärelle: 1 h
+
 Tehtävät 12-20: 3 h 30 min
-  Olivat haastavia, mutta onnistui pähkäilyn, materaalin kertaamisen ja googlailun jälkeen.
 
-
-
+  *Olivat haastavia, mutta onnistui pähkäilyn, materaalin kertaamisen ja googlailun jälkeen.
