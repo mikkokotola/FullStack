@@ -6,3 +6,4 @@ Full Stack Development -kurssin tehtävät (betaversio 1/2018).
 
 ### Viikottaiset tehtäväkansiot
   * [Viikko 1](https://github.com/mikkokotola/FullStack/tree/master/Vko1)
+  * [Viikko 2](https://github.com/mikkokotola/FullStack/tree/master/Vko2)
