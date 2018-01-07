@@ -63,7 +63,7 @@ Tehtävät 21-25 40 min
 
 * Tehtävä 22 oli ainakin minulla jo valmiiksi ratkaistu viikon 1 versiossa eli tässä ei tarvinnut tehdä mitään
 
-* Tehtävä 23 sen sijaan vaati pohdintaa, koska lähtödata ei ollut arrayna vaan arrayn objectien ominaisuutena. Ratkaisuni oli "const reducer = (accumulator, currentValue) => accumulator + currentValue; return (<p>yhteensä {Array.from(props.osat, x => x.tehtavia).reduce(reducer)} tehtävää</p>)"
+* Tehtävä 23 sen sijaan vaati pohdintaa, koska lähtödata ei ollut arrayna vaan arrayn objectien ominaisuutena. Ratkaisuni oli const reducer = (accumulator, currentValue) => accumulator + currentValue; return (\<p>yhteensä {Array.from(props.osat, x => x.tehtavia).reduce(reducer)} tehtävää\</p>)
 
 * Tehtävässä 24 oli haastavuustaso juuri kohdallaan. Piti miettiä ja kerrata materiaalia, mutta onnistui kuitenkin melko nopeasti.
 
