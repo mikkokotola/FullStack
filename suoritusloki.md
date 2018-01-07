@@ -47,3 +47,32 @@ Paluu Reactin äärelle: 1 h
 Tehtävät 12-20: 3 h 30 min
 
 * Olivat haastavia, mutta onnistui pähkäilyn, materaalin kertaamisen ja googlailun jälkeen.
+
+
+__Vko 2__
+
+Ajankäyttö yhteensä: KESKEN x h x min 
+
+_Yleiskommentit viikosta_
+
+_Ajankäyttö ja tarkemmat kommentit_
+
+Kokoelmien renderöiminen 25 min
+
+Tehtävät 21-25 40 min
+
+* Tehtävä 22 oli ainakin minulla jo valmiiksi ratkaistu viikon 1 versiossa eli tässä ei tarvinnut tehdä mitään
+
+* Tehtävä 23 sen sijaan vaati pohdintaa, koska lähtödata ei ollut arrayna vaan arrayn objectien ominaisuutena. Ratkaisuni oli const reducer = (accumulator, currentValue) => accumulator + currentValue; return (<p>yhteensä {Array.from(props.osat, x => x.tehtavia).reduce(reducer)} tehtävää</p>)
+
+* Tehtävässä 24 oli haastavuustaso juuri kohdallaan. Piti miettiä ja kerrata materiaalia, mutta onnistui kuitenkin melko nopeasti.
+
+* Tässä toimi hyvin materiaalin ja tehtävien suhde
+
+Lomakkeet 50 min
+
+Tehtävät 26-30 65 min
+
+* Hyviä tehtäviä, sai soveltaa materiaalien oppeja
+
+* Tehtävässä 30 en ollut aivan varma, mitä haettiin. Ainoa komponentti, jonka olin jo valmiiksi eriyttänyt, oli Person (joka renderöi henkilön). Tapahtumankäsittelijöitä ei kai voi/ole tarkoituksenmukaista ottaa omiksi komponenteikseen? En muokannut sovelluksen komponenttirakennetta.
