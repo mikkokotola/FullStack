@@ -54,6 +54,7 @@ __Vko 2__
 Ajankäyttö yhteensä: KESKEN x h x min 
 
 _Yleiskommentit viikosta_
+Kannattaa varmaan ohjeistaa opiskelijoita, onko tarkoitus luoda erillinen react app jokaiselle tehtäväkokonaisuudelle vai käyttää samaan appia ja muuttaa vain noita src:n sisällä olevia koodeja. Erilliset sovelluksethan ovat aika isoja.
 
 _Ajankäyttö ja tarkemmat kommentit_
 
@@ -76,3 +77,10 @@ Tehtävät 26-30 65 min
 * Hyviä tehtäviä, sai soveltaa materiaalien oppeja
 
 * Tehtävässä 30 en ollut aivan varma, mitä haettiin. Ainoa komponentti, jonka olin jo valmiiksi eriyttänyt, oli Person (joka renderöi henkilön). Tapahtumankäsittelijöitä ei kai voi/ole tarkoituksenmukaista ottaa omiksi komponenteikseen? En muokannut sovelluksen komponenttirakennetta.
+
+Datan haku palvelimelta 45 min
+
+Tehtävät 31-32 50 min
+* Jälkimmäinen oli aivan mahtava tehtävä! Pienellä soveltamisella päästiin käyttämään oikeita rajapintoja.
+
+REST API:n käyttö 10.30-
