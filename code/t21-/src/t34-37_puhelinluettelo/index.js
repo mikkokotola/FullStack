@@ -13,9 +13,7 @@ class App extends React.Component {
       persons: [],
       newName: '',
       newNumber: '',
-      filter: '',
-      notification: null,
-      error: null
+      filter: ''
     }
   }
 
@@ -49,27 +47,8 @@ class App extends React.Component {
             this.setState({
               persons: newPersons,
               newName: '',
-              newNumber: '',
-              notification: `Henkilö '${person.name}' on poistettu puhelinluettelosta`,
+              newNumber: ''
             })
-
-            setTimeout(() => {
-              this.setState({ notification: null })
-            }, 4000)
-          })
-          .catch(error => {
-            let newPersons = this.state.persons.filter(n => n.id !== id)
-            this.setState({
-              persons: newPersons,
-              newName: '',
-              newNumber: '',
-              notification: `Henkilö '${person.name}' oli jo poistettu puhelinluettelosta`,
-            })
-
-            setTimeout(() => {
-              this.setState({ notification: null })
-            }, 4000)
-
           })
       }
 
@@ -91,32 +70,10 @@ class App extends React.Component {
           this.setState({
             persons: this.state.persons.filter(person => person.id !== currentPerson.id).concat(newPerson),
             newName: '',
-            newNumber: '',
-            notification: `Henkilön '${currentPerson.name}' numero on päivitetty`
+            newNumber: ''
           })
-          setTimeout(() => {
-            this.setState({ notification: null })
-          }, 4000)
-
         })
-        .catch(error => {
-          personService
-            .create(personObject)
-            .then(newPerson => {
-              this.setState({
-                persons: this.state.persons.filter(person => person.id !== currentPerson.id).concat(newPerson),
-                newName: '',
-                newNumber: '',
-                notification: `Henkilö ${newPerson.name} oli poistettu luettelosta. Lisätty henkilö uudestaan päivitetyillä tiedoilla.`
-              })
-
-              setTimeout(() => {
-                this.setState({ notification: null })
-              }, 4000)
-            })
-
-        })
-
+      
     } else {
       personService
         .create(personObject)
@@ -124,19 +81,13 @@ class App extends React.Component {
           this.setState({
             persons: this.state.persons.concat(newPerson),
             newName: '',
-            newNumber: '',
-            notification: `Henkilö '${newPerson.name}' on lisätty puhelinluetteloon`
+            newNumber: ''
           })
-
-          setTimeout(() => {
-            this.setState({ notification: null })
-          }, 4000)
         })
     }
-
   }
 
-
+  
   /*   addPerson = (e) => {
       e.preventDefault()
       if (!this.state.persons.find(element => element.name === this.state.newName)) {
@@ -187,8 +138,6 @@ class App extends React.Component {
     return (
       <div>
         <h1>Puhelinluettelo</h1>
-        <Error message={this.state.error} />
-        <Notification message={this.state.notification} />
         <form onSubmit={this.addPerson}>
           <div>
             rajaa: <input value={this.state.filter} onChange={this.handleFilterChange} />
@@ -222,27 +171,6 @@ const Person = ({ person, remove }) => {
   )
 }
 
-const Notification = ({ message }) => {
-  if (message === null) {
-    return null
-  }
-  return (
-    <div className="notification">
-      {message}
-    </div>
-  )
-}
-
-const Error = ({ message }) => {
-  if (message === null) {
-    return null
-  }
-  return (
-    <div className="error">
-      {message}
-    </div>
-  )
-}
 
 ReactDOM.render(
   <App />,

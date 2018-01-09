@@ -51,10 +51,12 @@ Tehtävät 12-20: 3 h 30 min
 
 __Vko 2__
 
-Ajankäyttö yhteensä: KESKEN x h x min 
+Ajankäyttö yhteensä: 9 h 30 min
 
 _Yleiskommentit viikosta_
-Kannattaa varmaan ohjeistaa opiskelijoita, onko tarkoitus luoda erillinen react app jokaiselle tehtäväkokonaisuudelle vai käyttää samaan appia ja muuttaa vain noita src:n sisällä olevia koodeja. Erilliset sovelluksethan ovat aika isoja.
+Melko haastava, mutta hyvin opettavainen viikko oli! Tehtävä 30 jäi kesken 90 min pähkimisen jälkeen, muut onnistuivat. Ehkä tuokin nyt jo menisi jos siihen vielä palaisi.
+
+Kannattaa varmaan ohjeistaa opiskelijoita, onko tarkoitus luoda erillinen react app jokaiselle tehtäväkokonaisuudelle vai käyttää samaan appia ja muuttaa vain noita src:n sisällä olevia koodeja. Erilliset sovelluksethan ovat aika isoja. Tein itse erillisiä alkuun, sitten siirryin vain kopioimaan varsinaisen ydinkoodin alakansioihin ja käyttämään samaa sovelluspohjaa.
 
 _Ajankäyttö ja tarkemmat kommentit_
 
@@ -83,4 +85,20 @@ Datan haku palvelimelta 45 min
 Tehtävät 31-32 50 min
 * Jälkimmäinen oli aivan mahtava tehtävä! Pienellä soveltamisella päästiin käyttämään oikeita rajapintoja.
 
-REST API:n käyttö 10.30-
+REST API:n käyttö ja Datan lähetys palvelimelle 1 h 5 min
+
+Tehtävät 33-37 3 h 10 min
+
+* Tehtävä 33 oli vaikea. Aikaa meni ehkä 90 min enkä saanut toimimaan. Tarkoitukseni oli päivittää Appin statessa olevan filtterin arvoa erillisen Appin funktion kautta, mutta en saanut sitä toimimaan yhteen maalistauskomponentin kanssa. Jätin tehtävän hautumaan.
+
+* 34 ja 35 menivät helposti materiaalin esimerkkiä seuraten
+
+* 36 oli hieman vaikeampi ja vaati pähkimistä, mutta onnistui. Aikaa meni tunnin verran.
+
+* 37 oli taas helpompi ja onnistui soveltamalla materiaalin esimerkkiä ja pienellä päättelyllä
+
+Tyylien lisääminen 15 min
+Tehtävät 38-39: 25 min
+
+* Nämä olivat kivoja soveltamistehtävä, suht helposti onnistuivat.
+
