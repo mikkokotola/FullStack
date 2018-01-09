@@ -98,6 +98,7 @@ Tehtävät 33-37 3 h 10 min
 * 37 oli taas helpompi ja onnistui soveltamalla materiaalin esimerkkiä ja pienellä päättelyllä
 
 Tyylien lisääminen 15 min
+
 Tehtävät 38-39: 25 min
 
 * Nämä olivat kivoja soveltamistehtävä, suht helposti onnistuivat.
