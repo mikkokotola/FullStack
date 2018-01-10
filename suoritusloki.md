@@ -60,7 +60,7 @@ Tehtävät 12-20: 3 h 30 min
 Ajankäyttö yhteensä: 9 h 30 min
 
 _Yleiskommentit viikosta_
-Melko haastava, mutta hyvin opettavainen viikko oli! Tehtävä 30 jäi kesken 90 min pähkimisen jälkeen, muut onnistuivat. Ehkä tuokin nyt jo menisi jos siihen vielä palaisi.
+Melko haastava, mutta hyvin opettavainen viikko oli! Tehtävä 33 jäi kesken 90 min pähkimisen jälkeen, muut onnistuivat. Ehkä tuokin nyt jo menisi jos siihen vielä palaisi.
 
 Kannattaa varmaan ohjeistaa opiskelijoita, onko tarkoitus luoda erillinen react app jokaiselle tehtäväkokonaisuudelle vai käyttää samaan appia ja muuttaa vain noita src:n sisällä olevia koodeja. Erilliset sovelluksethan ovat aika isoja. Tein itse erillisiä alkuun, sitten siirryin vain kopioimaan varsinaisen ydinkoodin alakansioihin ja käyttämään samaa sovelluspohjaa.
 
