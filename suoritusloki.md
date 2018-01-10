@@ -5,6 +5,7 @@ Mikko Kotola
 ### Viikot
 * [Viikko 1](#vko1)
 * [Viikko 2](#vko2)
+* [Viikko 3](#vko3)
 
 <a name="vko1"></a>
 ### Vko 1
@@ -109,4 +110,29 @@ Tehtävät 38-39: 25 min
 
 * Nämä olivat kivoja soveltamistehtävä, suht helposti onnistuivat.
 
+<a name="vko3"></a>
+### Vko 3
 
+Ajankäyttö yhteensä: KESKEN x h x min
+
+_Yleiskommentit viikosta_
+
+* Askel askeleelta etenevä pedagoginen tyyli materiaalissa toimii todella hyvin: ymmärrys kasvaa tällä tyylillä huomattavasti syvällisemmin kuin hyppäämällä suoraan lopulliseen päämäärään.
+
+_Ajankäyttö ja tarkemmat kommentit_
+
+Node.js; Express; Lisää routeja 2 h 10 min 
+
+* Askel askeleelta etenevä pedagoginen tyyli materiaalissa toimii todella hyvin: ymmärrys kasvaa tällä tyylillä huomattavasti syvällisemmin kuin hyppäämällä suoraan lopulliseen päämäärään.
+
+* Katsoin ensin postmania, mutta otin sitten käyttöön VSCoden REST Client pluginin, mikä vaikuttikin toimivan hyvin.
+
+Tehtävät 40-45 45 min
+
+* Menivät helposti materiaalin esimerkkiä seuraten. 
+
+Huomioita HTTP pyyntötyyppien käytöstä 10 min
+
+Tehtävät 46-47: 25 min
+
+* Hyvät tehtävät. Vaativat hieman pähkäilyä, mutta vihjeet auttoivat juuri sopivasti.
