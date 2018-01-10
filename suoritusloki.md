@@ -2,7 +2,12 @@
 ### Suoritusloki (ajankäyttö ja kommentteja)
 Mikko Kotola
 
-__Vko 1__
+## Viikot
+* [Viikko 1](#vko1)
+* [Viikko 2](#vko2)
+
+<a name="vko1"></a>
+#Vko 1
 
 Ajankäyttö yhteensä: 15 h 20 min (sis. 5 h työkalusäätöä eli 10 h 20 min varsinainen aika)
 
@@ -49,7 +54,8 @@ Tehtävät 12-20: 3 h 30 min
 * Olivat haastavia, mutta onnistui pähkäilyn, materaalin kertaamisen ja googlailun jälkeen.
 
 
-__Vko 2__
+<a name="vko2"></a>
+#Vko 2
 
 Ajankäyttö yhteensä: 9 h 30 min
 
@@ -102,4 +108,5 @@ Tyylien lisääminen 15 min
 Tehtävät 38-39: 25 min
 
 * Nämä olivat kivoja soveltamistehtävä, suht helposti onnistuivat.
+
 
