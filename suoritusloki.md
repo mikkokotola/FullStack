@@ -1,13 +1,13 @@
-### Full Stack Development, betaversio 12/2017-1/2018
-### Suoritusloki (ajankäyttö ja kommentteja)
+## Full Stack Development, betaversio 12/2017-1/2018
+## Suoritusloki (ajankäyttö ja kommentteja)
 Mikko Kotola
 
-## Viikot
+### Viikot
 * [Viikko 1](#vko1)
 * [Viikko 2](#vko2)
 
 <a name="vko1"></a>
-#Vko 1
+### Vko 1
 
 Ajankäyttö yhteensä: 15 h 20 min (sis. 5 h työkalusäätöä eli 10 h 20 min varsinainen aika)
 
@@ -55,7 +55,7 @@ Tehtävät 12-20: 3 h 30 min
 
 
 <a name="vko2"></a>
-#Vko 2
+### Vko 2
 
 Ajankäyttö yhteensä: 9 h 30 min
 
