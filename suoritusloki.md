@@ -133,6 +133,27 @@ Tehtävät 40-45 45 min
 
 Huomioita HTTP pyyntötyyppien käytöstä 10 min
 
-Tehtävät 46-47: 25 min
+Tehtävät 46-47 25 min
 
 * Hyvät tehtävät. Vaativat hieman pähkäilyä, mutta vihjeet auttoivat juuri sopivasti.
+
+Yhteys frontendiin; Sovellus internettiin 1 h 30 min
+
+Tehtävät 48-50 50 min
+
+Node-sovellusten debuggaaminen 15 min
+Mongo 30 min
+
+Tehtävät 51-52 30 min
+
+* Aivan mahtavia tehtäviä! Nämä onnistuivat vihjeillä - ja uutta asiaa kertyy päähän koko ajan.
+
+Tietokantaa käyttävä backend 25 min
+
+Tehtävät 53-54 20 min
+
+Virheiden käsittely 10 min
+
+Tehtävät 55-57 30 min
+
+Refaktotointia - promisejen ketjutus

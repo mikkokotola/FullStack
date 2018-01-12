@@ -4,8 +4,6 @@ import axios from 'axios'
 import personService from './services/persons'
 import './index.css'
 
-
-
 class App extends React.Component {
   constructor(props) {
     super(props)
