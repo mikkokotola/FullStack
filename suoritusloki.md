@@ -113,17 +113,21 @@ Tehtävät 38-39: 25 min
 <a name="vko3"></a>
 ### Vko 3
 
-Ajankäyttö yhteensä: KESKEN x h x min
+Ajankäyttö yhteensä: 10 h 20 min
 
 _Yleiskommentit viikosta_
 
+* Tuon oman backend-appin koodi ei nyt näy päärepossa - ilmeisesti koska se on itsessään repo - onko ongelma - pitääkö saada näkyviin? Linkki sovellukseen on tämän repon etusivulla.
+
 * Askel askeleelta etenevä pedagoginen tyyli materiaalissa toimii todella hyvin: ymmärrys kasvaa tällä tyylillä huomattavasti syvällisemmin kuin hyppäämällä suoraan lopulliseen päämäärään.
+
+* Oli edelleen haastavaa, mutta opettavaista - ja tehtävät onnistuivat kyllä (joskus pähkimisen jälkeen)!
+
+* Paljon uusia työkaluja vyön alle
 
 _Ajankäyttö ja tarkemmat kommentit_
 
 Node.js; Express; Lisää routeja 2 h 10 min 
-
-* Askel askeleelta etenevä pedagoginen tyyli materiaalissa toimii todella hyvin: ymmärrys kasvaa tällä tyylillä huomattavasti syvällisemmin kuin hyppäämällä suoraan lopulliseen päämäärään.
 
 * Katsoin ensin postmania, mutta otin sitten käyttöön VSCoden REST Client pluginin, mikä vaikuttikin toimivan hyvin.
 
@@ -161,3 +165,5 @@ Refaktotointia - promisejen ketjutus ja Sovelluksen vieminen tuotantoon 40 min
 Tehtävät 58-59 1 h 10 min
 
 * Tehtävä 58 oli hankala, mutta onnistui pähkäilyn jälkeen. Aikaa meni noin 50 min
+
+
