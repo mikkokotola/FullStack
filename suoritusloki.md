@@ -156,4 +156,8 @@ Virheiden käsittely 10 min
 
 Tehtävät 55-57 30 min
 
-Refaktotointia - promisejen ketjutus
+Refaktotointia - promisejen ketjutus ja Sovelluksen vieminen tuotantoon 40 min
+
+Tehtävät 58-59 1 h 10 min
+
+* Tehtävä 58 oli hankala, mutta onnistui pähkäilyn jälkeen. Aikaa meni noin 50 min
