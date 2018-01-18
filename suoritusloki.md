@@ -175,6 +175,8 @@ _Yleiskommentit viikosta_
 
 * Tehtävien numeroinnissa on nyt kaksi tehtävää numerolla 60. En korjannut tätä vielä, varmaan kannattaa korjata numerointi kun vie tehtäviä varsinaisen kurssin tehtävälistaan (jos tulee muitakin muutoksia).
 
+* Lopetin esimerkkisovelluksen kehittämisen tekstin lukemisen ohessa tehtävän 60 jälkeen. En saanut esimerkkisovellusta toimimaan, joten siirryin tekemään materiaalia vastaavia muutoksia suoraan omaan sovellukseeni (blogilista).
+
 _Ajankäyttö ja tarkemmat kommentit_
 
 Sovelluksen rakenteen parantelu 65 min
@@ -184,15 +186,16 @@ Sovelluksen rakenteen parantelu 65 min
 * Mongoose antoi ohjeiden (osan 4 alku) mukaisella mongoosen yhdistämiskomennolla mongoose.connect(mongoUrl, { useMongoClient: true }) virheilmoituksen:
 WARNING: The `useMongoClient` option is no longer necessary in mongoose 5.x, please remove it. Kun tuo osan poisti, niin virheilmoitus katosi. Aiemmin minulla oli pakko olla tuo pidempi versio - ehkäpä mongoose on päivittynyt tässä välissä.
 
-
 Tehtävä 60 40 min
 
 * Tämä oli erinomainen tehtävä! Kurssilla opittavista taidoista uuden backendin luominen tyhjästä on keskeinen taito, ja tämä tehtävä kertasi prosessia mainiosti.
 
-Tehtävä 61 11.10-
+Tehtävä 60 osa2 1 h 10 min
 
 * En saanut otettua middlewaren erroria käyttöön. Jos otin sen käyttöön, palvelin palautti kaikkiiin pyyntöihin vastauksena errorin (vaikka get-pyyntö olisi ollut validi). Logger taas toimi hyvin.
 
-*
+* Piti kyllä tosiaan tehdä pienissä askeleissa.
 
+Node-sovellusten testaaminen 12.20-
 
+* 
