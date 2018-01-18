@@ -13,6 +13,8 @@ app.use(bodyParser.json())
 app.use(middleware.logger)
 //app.use(middleware.error)
 
+app.use(express.static('build'))
+
 if ( process.env.NODE_ENV !== 'production' ) {
   require('dotenv').config()
 }
