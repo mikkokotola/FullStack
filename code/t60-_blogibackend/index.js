@@ -4,18 +4,13 @@ const app = express()
 const bodyParser = require('body-parser')
 const cors = require('cors')
 const mongoose = require('mongoose')
-
-const Blog = mongoose.model('Blog', {
-  title: String,
-  author: String,
-  url: String,
-  likes: Number
-})
-
-//module.exports = Blog
+const middleware = require('./utils/middleware')
+const Blog = require('./models/blog')
 
 app.use(cors())
 app.use(bodyParser.json())
+app.use(middleware.logger)
+//app.use(middleware.error)
 
 if ( process.env.NODE_ENV !== 'production' ) {
   require('dotenv').config()
