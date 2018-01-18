@@ -196,6 +196,13 @@ Tehtävä 60 osa2 1 h 10 min
 
 * Piti kyllä tosiaan tehdä pienissä askeleissa.
 
-Node-sovellusten testaaminen 12.20-
+Node-sovellusten testaaminen 40 min
 
-* 
+* Selkeä kokonaisuus
+
+Tehtävät 61-65 2 h 30 min
+
+* Itse testien tekeminen tuntui melko sujuvalta. Javascriptin taulukoiden ja key-value-parien käsittely ja iteroiminen vaati vain aika paljon aikaa... Pitäisi opiskella tarkemmin noita valmiita käsittelyfunktioita.
+
+
+Apin testaaminen 22.00-
