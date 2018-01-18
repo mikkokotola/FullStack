@@ -1,35 +1,33 @@
 http://localhost:3003/api/blogs/
 
-GET http://localhost:3003/api/blogs HTTP/1.1
+GET http://localhost:3003/api/blogs/ HTTP/1.1
+
+POST http://localhost:3003/api/blogs HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Tonttublogi6",
+    "author": "Petri Tonttunen",
+    "url": "www.heipahei.org",
+    "likes": "7"
+}
+
+
+POST http://localhost:3003/api/blogs HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Kukkablogi",
+    "author": "Karri Kukkanen",
+    "url": "www.kukkia.org",
+    "likes": "98"
+}
 
 
 GET http://localhost:3003/api/blogs/277817 HTTP/1.1
 
 DELETE http://localhost:3003/api/blogs/4 HTTP/1.1
 
-POST http://localhost:3003/api/blogs HTTP/1.1
-content-type: application/json
-
-{
-    "title": "Tonttu Tonttunen",
-    "author": "050-66",
-    "url": "",
-    "likes": 7
-}
-
-POST https://infinite-sands-12997.herokuapp.com/api/persons HTTP/1.1
-content-type: application/json
-
-{
-    "name": "Martti",
-    "number": "050-66"
-}
 
 
-POST http://localhost:3001/api/persons HTTP/1.1
-content-type: application/json
 
-{
-    "name": "Arto Hellas",
-    "number": "050-9876543"
-}

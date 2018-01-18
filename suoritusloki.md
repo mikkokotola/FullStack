@@ -166,4 +166,33 @@ Tehtävät 58-59 1 h 10 min
 
 * Tehtävä 58 oli hankala, mutta onnistui pähkäilyn jälkeen. Aikaa meni noin 50 min
 
+<a name="vko4"></a>
+### Vko 4
+
+Ajankäyttö yhteensä: KESKEN x h x min
+
+_Yleiskommentit viikosta_
+
+* Tehtävien numeroinnissa on nyt kaksi tehtävää numerolla 60. En korjannut tätä vielä, varmaan kannattaa korjata numerointi kun vie tehtäviä varsinaisen kurssin tehtävälistaan (jos tulee muitakin muutoksia).
+
+_Ajankäyttö ja tarkemmat kommentit_
+
+Sovelluksen rakenteen parantelu 65 min
+
+* Uuh. Tässä meni kauan. Tein esimerkin muutokset omaan versiooni materiaalin Noteappista, mutta muutokset aiheuttivat sen, että backend ei enää palauttanut vastauksia frontendin kyselyihin. Tuo controller/paths ilmeisesti hajosi jotenkin. Kävin koodia läpi ja se oli mielestäni tarkalleen kuin materiaalissa, mutta ei toiminut. Pohdin mm., miksi paikallisen kehitysversion tietokantayhteyden määrittelevä if (process.env.NODE_ENV !== 'production') {require('dotenv').config()} oli poistettu. Mutta sen lisäämisellä tai poistolla ei ollut vaikutusta (Notesapp ei toiminut herokussa eikä paikallisesti). Sitten kopioin materiaalin koodin Matin githubista, mutta tämäkään ei johtanut mihinkään. Aikaa tähän oli mennyt tunti, joten totesin, että siirryn eteenpäin ja katson, onnistuisiko siirtymä omassa (phonebook) appissani.
+
+* Mongoose antoi ohjeiden (osan 4 alku) mukaisella mongoosen yhdistämiskomennolla mongoose.connect(mongoUrl, { useMongoClient: true }) virheilmoituksen:
+WARNING: The `useMongoClient` option is no longer necessary in mongoose 5.x, please remove it. Kun tuo osan poisti, niin virheilmoitus katosi. Aiemmin minulla oli pakko olla tuo pidempi versio - ehkäpä mongoose on päivittynyt tässä välissä.
+
+
+Tehtävä 60 40 min
+
+* Tämä oli erinomainen tehtävä! Kurssilla opittavista taidoista uuden backendin luominen tyhjästä on keskeinen taito, ja tämä tehtävä kertasi prosessia mainiosti.
+
+Tehtävä 61 11.10-
+
+* En saanut otettua middlewaren erroria käyttöön. Jos otin sen käyttöön, palvelin palautti kaikkiiin pyyntöihin vastauksena errorin (vaikka get-pyyntö olisi ollut validi). Logger taas toimi hyvin.
+
+*
+
 
