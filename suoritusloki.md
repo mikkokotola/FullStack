@@ -205,4 +205,17 @@ Tehtävät 61-65 2 h 30 min
 * Itse testien tekeminen tuntui melko sujuvalta. Javascriptin taulukoiden ja key-value-parien käsittely ja iteroiminen vaati vain aika paljon aikaa... Pitäisi opiskella tarkemmin noita valmiita käsittelyfunktioita.
 
 
-Apin testaaminen 22.00-
+Apin testaaminen 1 h 20 min
+
+* Tässä vaiheessa piti asentaa Mongodb paikallisesti ja perehtyä paikallisen version käyttöön, jotta testien ajamisessa pääsi eteenpäin. Tein materiaalia vastaavia testejä omalle blogisovellukselleni.
+
+Tietokannan alustaminen ennen testejä 13.10-14.00
+
+Tehtävät 66-69 20 min
+
+* 66 ja 67 olin jo tehnyt materiaalin lukemisen ohella, olivat käytännössä valmiit
+
+* 68 ja 69 menivät helposti
+
+Testien refaktorointi 18.50-
+

@@ -1,8 +1,7 @@
-http://localhost:3003/api/blogs/
 
-GET http://localhost:3003/api/blogs/ HTTP/1.1
+GET http://localhost:3001/api/blogs/ HTTP/1.1
 
-POST http://localhost:3003/api/blogs HTTP/1.1
+POST http://localhost:3001/api/blogs HTTP/1.1
 content-type: application/json
 
 {
@@ -13,20 +12,36 @@ content-type: application/json
 }
 
 
-POST http://localhost:3003/api/blogs HTTP/1.1
+POST http://localhost:3001/api/blogs HTTP/1.1
 content-type: application/json
 
 {
-    "title": "Kukkablogi",
-    "author": "Karri Kukkanen",
+    "title": "Kukkablogi3",
+    "author": "Kirsi Kukkanen",
     "url": "www.kukkia.org",
-    "likes": "98"
+    "likes": "909"
 }
 
 
-GET http://localhost:3003/api/blogs/277817 HTTP/1.1
 
-DELETE http://localhost:3003/api/blogs/4 HTTP/1.1
+GET http://localhost:3002/api/blogs/ HTTP/1.1
+
+POST http://localhost:3002/api/blogs HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Kalastusblogi",
+    "author": "Kalle Kalanen",
+    "url": "www.fisu.org",
+    "likes": "12"
+}
+
+
+
+
+GET http://localhost:3001/api/blogs/277817 HTTP/1.1
+
+DELETE http://localhost:3001/api/blogs/4 HTTP/1.1
 
 
 
