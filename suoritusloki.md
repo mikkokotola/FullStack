@@ -217,5 +217,13 @@ Tehtävät 66-69 20 min
 
 * 68 ja 69 menivät helposti
 
-Testien refaktorointi 18.50-
+Testien refaktorointi 15 min
+
+Tehtävät 70-72 1 h 10 min
+
+Käyttäjien hallinta ja monimutkaisempi tietokantaskeema
+sekä samaan aikaan tehtävät 73-75 2 h
+
+
+
 

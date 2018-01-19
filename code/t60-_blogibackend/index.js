@@ -7,7 +7,6 @@ const mongoose = require('mongoose')
 const app = express()
 const middleware = require('./utils/middleware')
 const Blog = require('./models/blog')
-const blogsRouter = require('./controllers/blogs')
 const config = require('./utils/config')
 
 app.use(cors())
@@ -16,6 +15,11 @@ app.use(middleware.logger)
 //app.use(middleware.error)
 
 app.use(express.static('build'))
+
+const blogsRouter = require('./controllers/blogs')
+app.use('/api/blogs', blogsRouter)
+const usersRouter = require('./controllers/users')
+app.use('/api/users', usersRouter)
 
 /* if ( process.env.NODE_ENV !== 'production' ) {
   require('dotenv').config()
@@ -26,7 +30,7 @@ app.use(express.static('build'))
 mongoose.connect(config.mongoUrl)
 mongoose.Promise = global.Promise
 
-app.use('/api/blogs', blogsRouter)
+
 
 //const PORT = process.env.PORT || 3003
 const PORT = config.port

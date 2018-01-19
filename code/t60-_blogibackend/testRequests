@@ -1,14 +1,15 @@
 
 GET http://localhost:3001/api/blogs/ HTTP/1.1
+GET http://localhost:3001/api/users/ HTTP/1.1
 
-POST http://localhost:3001/api/blogs HTTP/1.1
+POST http://localhost:3001/api/users HTTP/1.1
 content-type: application/json
 
 {
-    "title": "Tonttublogi6",
-    "author": "Petri Tonttunen",
-    "url": "www.heipahei.org",
-    "likes": "7"
+    "username": "tonttuX",
+    "name": "T Torv",
+    "password": "salaisuusSulle",
+    "adult": "false"
 }
 
 
@@ -16,12 +17,39 @@ POST http://localhost:3001/api/blogs HTTP/1.1
 content-type: application/json
 
 {
-    "title": "Kukkablogi3",
+    "title": "Kukkasblogi88",
     "author": "Kirsi Kukkanen",
+    "url": "www.kukkiaa.org",
+    "likes": "909",
+    "userId": "5a62682a43dae965556b0d75"
+}
+
+GET http://localhost:3001/api/blogs/5a62612b5ae5935fa481927e HTTP/1.1
+
+
+DELETE http://localhost:3001/api/blogs/5a62682a43dae965556b0d73 HTTP/1.1
+
+PUT http://localhost:3001/api/blogs/5a62612b5ae5935fa481927d HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Kukkablogi9",
+    "author": "Kirsis Kukkanen",
     "url": "www.kukkia.org",
     "likes": "909"
 }
 
+
+
+POST http://localhost:3001/api/blogs HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Tonttublogi7",
+    "author": "Petri Tonttunen",
+    "url": "www.heipahei.org",
+    "likes": "7"
+}
 
 
 GET http://localhost:3002/api/blogs/ HTTP/1.1
@@ -39,9 +67,7 @@ content-type: application/json
 
 
 
-GET http://localhost:3001/api/blogs/277817 HTTP/1.1
 
-DELETE http://localhost:3001/api/blogs/4 HTTP/1.1
 
 
 
