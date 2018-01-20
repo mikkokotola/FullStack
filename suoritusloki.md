@@ -6,6 +6,7 @@ Mikko Kotola
 * [Viikko 1](#vko1)
 * [Viikko 2](#vko2)
 * [Viikko 3](#vko3)
+* [Viikko 4](#vko4)
 
 <a name="vko1"></a>
 ### Vko 1
@@ -169,13 +170,15 @@ Tehtävät 58-59 1 h 10 min
 <a name="vko4"></a>
 ### Vko 4
 
-Ajankäyttö yhteensä: KESKEN x h x min
+Ajankäyttö yhteensä: 16 h
 
 _Yleiskommentit viikosta_
 
 * Tehtävien numeroinnissa on nyt kaksi tehtävää numerolla 60. En korjannut tätä vielä, varmaan kannattaa korjata numerointi kun vie tehtäviä varsinaisen kurssin tehtävälistaan (jos tulee muitakin muutoksia).
 
 * Lopetin esimerkkisovelluksen kehittämisen tekstin lukemisen ohessa tehtävän 60 jälkeen. En saanut esimerkkisovellusta toimimaan, joten siirryin tekemään materiaalia vastaavia muutoksia suoraan omaan sovellukseeni (blogilista).
+
+* Viikko oli melko haastava ja aikaa meni
 
 _Ajankäyttö ja tarkemmat kommentit_
 
@@ -209,7 +212,7 @@ Apin testaaminen 1 h 20 min
 
 * Tässä vaiheessa piti asentaa Mongodb paikallisesti ja perehtyä paikallisen version käyttöön, jotta testien ajamisessa pääsi eteenpäin. Tein materiaalia vastaavia testejä omalle blogisovellukselleni.
 
-Tietokannan alustaminen ennen testejä 13.10-14.00
+Tietokannan alustaminen ennen testejä 50 min
 
 Tehtävät 66-69 20 min
 
@@ -224,6 +227,10 @@ Tehtävät 70-72 1 h 10 min
 Käyttäjien hallinta ja monimutkaisempi tietokantaskeema
 sekä samaan aikaan tehtävät 73-75 2 h
 
+Kirjautuminen ja tehtävät 76-79 3 h 45 min
 
+* Toiminnallisuudet oli helpompi toteuttaa kuin testit. Tehtävä 79 jäi kesken.
 
+ESLint ja tehtävä 80 10 min
 
+* ESlint-erroreita tuli aika paljon. En lähtenyt kuitenkaan vielä korjaamaan.

@@ -15,19 +15,64 @@ content-type: application/json
 
 POST http://localhost:3001/api/blogs HTTP/1.1
 content-type: application/json
+authorization: bearer eyJhbGc
 
 {
-    "title": "Kukkasblogi88",
-    "author": "Kirsi Kukkanen",
-    "url": "www.kukkiaa.org",
-    "likes": "909",
-    "userId": "5a62682a43dae965556b0d75"
+    "title": "Kukablogi",
+    "author": "Kirsi Kukanen",
+    "url": "www.kuka.org",
+    "likes": "8"
+}
+
+POST http://localhost:3001/api/blogs HTTP/1.1
+content-type: application/json
+
+{
+    "title": "Kukablogi",
+    "author": "Kirsi Kukanen",
+    "url": "www.kuka.org",
+    "likes": "8"
+}
+
+POST http://localhost:3001/api/blogs HTTP/1.1
+content-type: application/json
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRvbnR0dVoiLCJpZCI6IjVhNjMxOWIxMWJhOTJmN2E2YjZhMjM3NSIsImlhdCI6MTUxNjQ0NDE1MX0.8REYu-0Pgq50xgVgYajZED9vKoUAEwjzEIGC1PDr6ws
+
+{
+    "title": "Kurablogi9",
+    "author": "Kalle Kuranen",
+    "url": "www.kura.org",
+    "likes": "4"
+}
+
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hcmRlIiwiaWQiOiI1YTYzOGFiOWUzMzRkYTExOWE0NzlhYmYiLCJpYXQiOjE1MTY0NzMwNzR9.6nXwjbyVFWG2LK4_1TO87w0VfaqP7beZkVDE5aQOi3U
+
+POST http://localhost:3001/api/users HTTP/1.1
+content-type: application/json
+
+{
+    "username": "marde",
+    "name": "M Maarna",
+    "password": "salaisuus",
+    "adult": "false"
+}
+
+POST http://localhost:3001/api/login HTTP/1.1
+content-type: application/json
+
+{
+    "username": "marde",
+    "password": "salaisuus"    
 }
 
 GET http://localhost:3001/api/blogs/5a62612b5ae5935fa481927e HTTP/1.1
 
 
-DELETE http://localhost:3001/api/blogs/5a62682a43dae965556b0d73 HTTP/1.1
+DELETE http://localhost:3001/api/blogs/5a63814598826a0cf40171f0 HTTP/1.1
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRvbnR0dVoiLCJpZCI6IjVhNjMxOWIxMWJhOTJmN2E2YjZhMjM3NSIsImlhdCI6MTUxNjQ0NDE1MX0.8REYu-0Pgq50xgVgYajZED9vKoUAEwjzEIGC1PDr6ws
+
+DELETE http://localhost:3001/api/blogs/5a63814598826a0cf40171f0 HTTP/1.1
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hcmRlIiwiaWQiOiI1YTYzOGFiOWUzMzRkYTExOWE0NzlhYmYiLCJpYXQiOjE1MTY0NzMwNzR9.6nXwjbyVFWG2LK4_1TO87w0VfaqP7beZkVDE5aQOi3U
 
 PUT http://localhost:3001/api/blogs/5a62612b5ae5935fa481927d HTTP/1.1
 content-type: application/json

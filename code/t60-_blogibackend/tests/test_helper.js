@@ -16,6 +16,21 @@ const initialBlogs = [
     }
 ]
 
+const initialUsers = [
+    {
+        username: "marde",
+        name: "M Maarna",
+        password: "malaisuus",
+        adult: "false"
+    },
+    {
+        username: "tarde",
+        name: "T Taarna",
+        password: "talaisuus",
+        adult: "true"
+    }
+]
+
 const format = (blog) => {
     return {
         id: blog._id,
@@ -30,20 +45,20 @@ const nonExistingId = async () => {
     const blog = new Blog()
     await blog.save()
     await blog.remove()
-  
+
     return blog._id.toString()
-  }
-  
-  const blogsInDb = async () => {
+}
+
+const blogsInDb = async () => {
     const blogs = await Blog.find({})
     return blogs.map(format)
-  }
-  
-  const usersInDb = async () => {
+}
+
+const usersInDb = async () => {
     const users = await User.find({})
     return users
-  }
-  
-  module.exports = {
-    initialBlogs, format, nonExistingId, blogsInDb, usersInDb
-  }
+}
+
+module.exports = {
+    initialBlogs, initialUsers, format, nonExistingId, blogsInDb, usersInDb
+}

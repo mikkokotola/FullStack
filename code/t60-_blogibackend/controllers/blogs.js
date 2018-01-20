@@ -1,6 +1,7 @@
 const blogsRouter = require('express').Router()
 const Blog = require('../models/blog')
 const User = require('../models/user')
+const jwt = require('jsonwebtoken')
 
 const formatBlog = (blog) => {
     let user = undefined
@@ -23,7 +24,8 @@ const formatBlog = (blog) => {
 }
 
 blogsRouter.get('/', async (request, response) => {
-    const blogs = await Blog.find({}).populate('user',{username: 1, name: 1})
+    console.log("In blog get handler.")
+    const blogs = await Blog.find({}).populate('user', { username: 1, name: 1 })
     response.json(blogs.map(formatBlog))
     /* Blog
         .find({})
@@ -49,7 +51,23 @@ blogsRouter.get('/:id', async (request, response) => {
 })
 
 blogsRouter.delete('/:id', async (request, response) => {
+    console.log("In delete.")
+    let decodedToken = undefined
     try {
+        decodedToken = jwt.verify(request.token, process.env.SECRET)
+    } catch (exception) {
+        return response.status(401).json({ error: 'token missing or invalid' })
+    }
+        
+    try {
+        const blog = await Blog.findById(request.params.id)
+        const user = await User.findById(decodedToken.id)
+        //console.log(blog.user.toString())
+        //console.log(user._id.toString())
+        if (blog.user.toString() !== user._id.toString()) {
+            return response.status(401).json({ error: 'User not allowed to perform operation.' })
+        }
+
         await Blog.findByIdAndRemove(request.params.id)
 
         response.status(204).end()
@@ -59,9 +77,21 @@ blogsRouter.delete('/:id', async (request, response) => {
     }
 })
 
-
 blogsRouter.post('/', async (request, response) => {
     const body = request.body
+    console.log("In blog posthandler.")
+    //console.log(request.token)
+    let decodedToken = undefined
+    try {
+        decodedToken = jwt.verify(request.token, process.env.SECRET)
+    } catch (exception) {
+        return response.status(401).json({ error: 'token missing or invalid' })
+    }
+    
+
+    if (!request.token || decodedToken === undefined || !decodedToken.id) {
+        return response.status(401).json({ error: 'token missing or invalid' })
+    }
 
     if (body.title === undefined) {
         return response.status(400).json({ error: 'Blog title missing.' })
@@ -76,7 +106,10 @@ blogsRouter.post('/', async (request, response) => {
     }
 
     try {
-        const user = await User.findById(body.userId)
+        console.log("In blog posthandler try")
+        //const user = await User.findById(body.userId)
+        const user = await User.findById(decodedToken.id)
+
 
         const blog = new Blog(
             {
@@ -94,14 +127,18 @@ blogsRouter.post('/', async (request, response) => {
 
         response.status(201).json(formatBlog(savedBlog))
     } catch (exception) {
-        console.log(exception)
-        response.status(500).json({ error: 'Something went wrong.' })
+        if (exception.name === 'JsonWebTokenError') {
+            response.status(401).json({ error: exception.message })
+        } else {
+            console.log(exception)
+            response.status(500).json({ error: 'something went wrong...' })
+        }
     }
 })
 
 blogsRouter.put('/:id', async (request, response) => {
     const body = request.body
-    
+
     if (body.title === undefined) {
         return response.status(400).json({ error: 'Blog title missing.' })
     }
@@ -114,8 +151,8 @@ blogsRouter.put('/:id', async (request, response) => {
         return response.status(400).json({ error: 'Blog url missing.' })
     }
 
-    
-  
+
+
     try {
         console.log("In try.")
         const blog = {
@@ -131,20 +168,20 @@ blogsRouter.put('/:id', async (request, response) => {
                 url: body.url,
                 likes: body.likes === undefined ? 0 : body.likes
             }
-        ) */ 
+        ) */
         console.log(request.params.id)
         console.log(blog)
-        
-        
-        const updatedBlog = await Blog.findByIdAndUpdate(request.params.id, blog, { new: true } )
+
+
+        const updatedBlog = await Blog.findByIdAndUpdate(request.params.id, blog, { new: true })
         response.status(200).json(formatBlog(updatedBlog))
     } catch (exception) {
         console.log(exception)
         response.status(400).send({ error: 'malformatted id' })
     }
-  
-      
-  })
-  
+
+
+})
+
 
 module.exports = blogsRouter

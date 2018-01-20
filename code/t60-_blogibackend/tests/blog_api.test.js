@@ -3,7 +3,13 @@ const { app, server } = require('../index')
 const api = supertest(app)
 const Blog = require('../models/blog')
 const User = require('../models/user')
-const { initialBlogs, format, nonExistingId, blogsInDb, usersInDb } = require('./test_helper')
+const { initialBlogs, initialUsers, format, nonExistingId, blogsInDb, usersInDb } = require('./test_helper')
+const jwt = require('jsonwebtoken')
+const bcrypt = require('bcrypt')
+let token = undefined
+let owner = undefined
+let addedBlog = undefined
+let savedBlog = undefined
 
 describe('Getting blogs', async () => {
     beforeAll(async () => {
@@ -41,12 +47,62 @@ describe('Getting blogs', async () => {
 describe('New blogs saved', async () => {
     beforeAll(async () => {
         await Blog.remove({})
+        await User.remove({})
 
-        const blogObjects = initialBlogs.map(blog => new Blog(blog))
-        await Promise.all(blogObjects.map(blog => blog.save()))
+        const saltRounds = 10
+
+        const passwordHash = await bcrypt.hash("malaisuus", saltRounds)
+
+        const userObject = new User({
+            username: "marde",
+            name: "M Maarna",
+            adult: "false",
+            passwordHash
+        })
+
+        const ownerId = userObject._id
+
+        await userObject.save()
+
+        const passwordHash2 = await bcrypt.hash("talaisuus", saltRounds)
+
+        const userObject2 = new User({
+            username: "tarde",
+            name: "T Taarna",
+            adult: "true",
+            passwordHash
+        })
+
+        await userObject2.save()
+
+        owner = await User.findById(ownerId)
+        //console.log(owner)
+
+        const blogObject = new Blog({
+            title: "Tonttublogi",
+            author: "Petri Tonttunen",
+            url: "www.joulu.org",
+            likes: 12,
+            user: ownerId
+        })
+
+        const savedBlog = await blogObject.save()
+
+        owner.blogs = owner.blogs.concat(savedBlog._id)
+        await owner.save()
+
+        const answer = await api
+            .post('/api/login')
+            .send(
+            {
+                username: "marde",
+                password: "malaisuus"
+            })
+        token = answer.body.token
     })
 
     test('a valid blog can be added ', async () => {
+
         const newBlog = {
             title: "Sohvablogi",
             author: "Santeri Sohva",
@@ -56,6 +112,7 @@ describe('New blogs saved', async () => {
 
         await api
             .post('/api/blogs')
+            .set('Authorization', 'bearer ' + token)
             .send(newBlog)
             .expect(201)
             .expect('Content-Type', /application\/json/)
@@ -65,7 +122,7 @@ describe('New blogs saved', async () => {
 
         const titles = response.body.map(r => r.title)
 
-        expect(response.body.length).toBe(initialBlogs.length + 1)
+        expect(response.body.length).toBe(2)
         expect(titles).toContain('Sohvablogi')
     })
 
@@ -80,6 +137,7 @@ describe('New blogs saved', async () => {
 
         await api
             .post('/api/blogs')
+            .set('Authorization', 'bearer ' + token)
             .send(newBlog)
             .expect(201)
             .expect('Content-Type', /application\/json/)
@@ -101,6 +159,7 @@ describe('New blogs saved', async () => {
 
         await api
             .post('/api/blogs')
+            .set('Authorization', 'bearer ' + token)
             .send(newBlog)
             .expect(400)
     })
@@ -114,16 +173,17 @@ describe('New blogs saved', async () => {
 
         await api
             .post('/api/blogs')
+            .set('Authorization', 'bearer ' + token)
             .send(newBlog)
             .expect(400)
     })
 
 })
 
-describe('Blog deletion', async () => {
-    let addedBlog
-
+/* describe('Blog deletion', async () => {
+    
     beforeAll(async () => {
+        
         addedBlog = new Blog(
             {
                 title: "Tonttublogi",
@@ -131,18 +191,26 @@ describe('Blog deletion', async () => {
                 url: "www.joulu.org",
                 likes: 12
             })
-        await addedBlog.save()
+
+            
+        savedBlog = await api
+        .post('/api/blogs')
+        .set('Authorization', 'bearer ' + token)
+        .send(addedBlog)
+        //await addedBlog.save()
 
     })
 
     test('a valid blog can be deleted', async () => {
         const blogsAtBeginningOfOperation = await blogsInDb()
+        console.log("Logging addedBlog id")
+        console.log(savedBlog._id)
         await api
-            .delete(`/api/blogs/${addedBlog._id}`)
+            .delete(`/api/blogs/${savedBlog._id}`)
+            .set('Authorization', 'bearer ' + token)
             .expect(204)
 
         const blogsAtEndOfOperation = await blogsInDb()
-
 
         const titles = blogsAtEndOfOperation.map(r => r.title)
 
@@ -150,7 +218,7 @@ describe('Blog deletion', async () => {
         expect(blogsAtEndOfOperation.length).toBe(blogsAtBeginningOfOperation.length - 1)
     })
 
-})
+}) */
 
 describe('Blog update', async () => {
     let addedBlog
