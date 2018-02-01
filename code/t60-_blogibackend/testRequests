@@ -1,8 +1,8 @@
 
-GET http://localhost:3001/api/blogs/ HTTP/1.1
-GET http://localhost:3001/api/users/ HTTP/1.1
+GET http://localhost:3003/api/blogs/ HTTP/1.1
+GET http://localhost:3003/api/users/ HTTP/1.1
 
-POST http://localhost:3001/api/users HTTP/1.1
+POST http://localhost:3003/api/users HTTP/1.1
 content-type: application/json
 
 {
@@ -13,7 +13,17 @@ content-type: application/json
 }
 
 
-POST http://localhost:3001/api/blogs HTTP/1.1
+POST http://localhost:3003/api/users HTTP/1.1
+content-type: application/json
+
+{
+    "username": "maikki",
+    "name": "Maikki",
+    "password": "malaisuus",
+    "adult": "true"
+}
+
+POST http://localhost:3003/api/blogs HTTP/1.1
 content-type: application/json
 authorization: bearer eyJhbGc
 
@@ -24,7 +34,7 @@ authorization: bearer eyJhbGc
     "likes": "8"
 }
 
-POST http://localhost:3001/api/blogs HTTP/1.1
+POST http://localhost:3003/api/blogs HTTP/1.1
 content-type: application/json
 
 {
@@ -34,20 +44,28 @@ content-type: application/json
     "likes": "8"
 }
 
-POST http://localhost:3001/api/blogs HTTP/1.1
+POST http://localhost:3003/api/blogs HTTP/1.1
 content-type: application/json
-authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRvbnR0dVoiLCJpZCI6IjVhNjMxOWIxMWJhOTJmN2E2YjZhMjM3NSIsImlhdCI6MTUxNjQ0NDE1MX0.8REYu-0Pgq50xgVgYajZED9vKoUAEwjzEIGC1PDr6ws
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1haWtraSIsImlkIjoiNWE2NDZlYmJiNjJmMjIzNzg4OTNkMjA4IiwiaWF0IjoxNTE2OTY3MDY0fQ.T6qKRD75yCjapLJ-dedP-0FwT7Ksc5uUn1kwxJPUdJY
 
 {
-    "title": "Kurablogi9",
-    "author": "Kalle Kuranen",
-    "url": "www.kura.org",
-    "likes": "4"
+    "title": "Sotkablogi",
+    "author": "Sakari Sotka",
+    "url": "www.sotka.org",
+    "likes": "8"
 }
 
-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hcmRlIiwiaWQiOiI1YTYzOGFiOWUzMzRkYTExOWE0NzlhYmYiLCJpYXQiOjE1MTY0NzMwNzR9.6nXwjbyVFWG2LK4_1TO87w0VfaqP7beZkVDE5aQOi3U
+POST http://localhost:3003/api/blogs HTTP/1.1
+content-type: application/json
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1haWtraSIsImlkIjoiNWE2NDZlYmJiNjJmMjIzNzg4OTNkMjA4IiwiaWF0IjoxNTE2OTY3MDY0fQ.T6qKRD75yCjapLJ-dedP-0FwT7Ksc5uUn1kwxJPUdJY
 
-POST http://localhost:3001/api/users HTTP/1.1
+{
+    "title": "Sotkablogi2",
+    "author": "Sakari Sotka",
+    "url": "www.sotka.org"
+}
+
+POST http://localhost:3003/api/users HTTP/1.1
 content-type: application/json
 
 {
@@ -57,12 +75,12 @@ content-type: application/json
     "adult": "false"
 }
 
-POST http://localhost:3001/api/login HTTP/1.1
+POST http://localhost:3003/api/login HTTP/1.1
 content-type: application/json
 
 {
-    "username": "marde",
-    "password": "salaisuus"    
+    "username": "maikki",
+    "password": "malaisuus"    
 }
 
 GET http://localhost:3001/api/blogs/5a62612b5ae5935fa481927e HTTP/1.1
@@ -74,14 +92,15 @@ authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InRvb
 DELETE http://localhost:3001/api/blogs/5a63814598826a0cf40171f0 HTTP/1.1
 authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1hcmRlIiwiaWQiOiI1YTYzOGFiOWUzMzRkYTExOWE0NzlhYmYiLCJpYXQiOjE1MTY0NzMwNzR9.6nXwjbyVFWG2LK4_1TO87w0VfaqP7beZkVDE5aQOi3U
 
-PUT http://localhost:3001/api/blogs/5a62612b5ae5935fa481927d HTTP/1.1
+PUT http://localhost:3003/api/blogs/5a646f9fb62f22378893d20a HTTP/1.1
 content-type: application/json
+authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6Im1haWtraSIsImlkIjoiNWE2NDZlYmJiNjJmMjIzNzg4OTNkMjA4IiwiaWF0IjoxNTE2OTY3MDY0fQ.T6qKRD75yCjapLJ-dedP-0FwT7Ksc5uUn1kwxJPUdJY
 
 {
-    "title": "Kukkablogi9",
-    "author": "Kirsis Kukkanen",
-    "url": "www.kukkia.org",
-    "likes": "909"
+    "title": "Mattoblogi2",
+    "author": "Matti Matto",
+    "url": "www.matto.org",
+    "likes": "9"
 }
 
 

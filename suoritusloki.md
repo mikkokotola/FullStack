@@ -234,3 +234,27 @@ Kirjautuminen ja tehtävät 76-79 3 h 45 min
 ESLint ja tehtävä 80 10 min
 
 * ESlint-erroreita tuli aika paljon. En lähtenyt kuitenkaan vielä korjaamaan.
+
+<a name="vko5"></a>
+### Vko 5
+
+Ajankäyttö yhteensä: KESKEN x h
+
+_Yleiskommentit viikosta_
+
+
+_Ajankäyttö ja tarkemmat kommentit_
+
+Kirjautuminen React-sovelluksesta ja tehtävät 81-84 3 h 45 min
+
+* Tähän meni normaalia kauemmin, silä olin tehnyt osion osittain alun perin (1 h 30 min), mutta osaa muutettiin varsinaista kurssia varten, joten katsoin tämän vielä uudelleen muuttuneen materiaalin kanssa.
+
+
+Kirjautumislomakkeen näyttäminen vain tarvittaessa; Komponentin lapset; ref sekä tehtävät 85-88  6 h 05 min ja 8.55-9.30 ja 9.50-10.15 ja 12.50-
+
+* Yksilöllisten tapahtumakäsittelijöiden määrittäminen ja blogin laajojen tietojen näkyvyystiedon ylläpito statessa blogin "ylimääräisenä kenttänä" vaati paljon pähkäilyä. Yksilöllisten linkkien tekeminen oli jäänyt minulla kesken osan 2 tehtävissä, jote nyt piti käydä perusteellisesti uudestaan läpi.
+
+* Tässä oli paljon tekemistä!
+
+* Toiminnot on toteutettu siten, että kaikki toiminnot vaativat kirjautumisen
+
