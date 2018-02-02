@@ -250,7 +250,7 @@ Kirjautuminen React-sovelluksesta ja tehtävät 81-84 3 h 45 min
 * Tähän meni normaalia kauemmin, silä olin tehnyt osion osittain alun perin (1 h 30 min), mutta osaa muutettiin varsinaista kurssia varten, joten katsoin tämän vielä uudelleen muuttuneen materiaalin kanssa.
 
 
-Kirjautumislomakkeen näyttäminen vain tarvittaessa; Komponentin lapset; ref sekä tehtävät 85-88  6 h 05 min ja 8.55-9.30 ja 9.50-10.15 ja 12.50-
+Kirjautumislomakkeen näyttäminen vain tarvittaessa; Komponentin lapset; ref sekä tehtävät 85-88  7 h 35 min
 
 * Yksilöllisten tapahtumakäsittelijöiden määrittäminen ja blogin laajojen tietojen näkyvyystiedon ylläpito statessa blogin "ylimääräisenä kenttänä" vaati paljon pähkäilyä. Yksilöllisten linkkien tekeminen oli jäänyt minulla kesken osan 2 tehtävissä, jote nyt piti käydä perusteellisesti uudestaan läpi.
 
@@ -258,3 +258,18 @@ Kirjautumislomakkeen näyttäminen vain tarvittaessa; Komponentin lapset; ref se
 
 * Toiminnot on toteutettu siten, että kaikki toiminnot vaativat kirjautumisen
 
+TÄSSÄ VAIHEESSA SIIRRYIN LUKEMAAN VARSINAISEN KURSSIN MATERIAALIA. Jatkoin kuitenkin betan tehtävillä.
+
+PropTypes ja tehtävä 89 10 min
+
+React-sovelluksen testaus ja tehtävät 90-92 10.15-11.05 ja 11.25-11.45
+
+* 90 ja 91 menivät helposti ja nopeasti
+* 92:ssa oli vaikeuksia blogin ehdollisen renderöinnin testaamisen kanssa. Jätin kesken/hautumaan.
+
+
+Mount ja full DOM -renderöinti; Frontendin integraatiotestaus ja tehtävät 93-94 11.50-13.05 ja 13.15-13.50
+* 93 meni OK
+* 94:ssa en saanut appia renderöitymään kirjautuneella käyttäjällä. Jätin kesken/hautumaan. 
+
+Snapshot-testaus; End to end -testaus; Sovellusten tilan hallinta reduxilla 13.55-14.00

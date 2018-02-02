@@ -19,7 +19,7 @@ const tokenExtractor = (request, response, next) => {
            
         if (authorization && authorization.toLowerCase().startsWith('bearer ')) {
             request.token = authorization.substring(7)
-            console.log(request.token)
+            //console.log(request.token)
             //return authorization.substring(7)
         } else {
             request.token = "Not defined."

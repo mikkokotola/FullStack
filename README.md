@@ -12,3 +12,6 @@ Full Stack Development -kurssin tehtävät (betaversio 1/2018).
 Node app for the Univ. of Helsinki Full Stack Development course.
 
 [Link to app](https://infinite-sands-12997.herokuapp.com/)
+
+### Bloglist frontend
+[Link to repo](https://github.com/mikkokotola/FullStackBlogFrontend)
