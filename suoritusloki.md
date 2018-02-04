@@ -7,6 +7,7 @@ Mikko Kotola
 * [Viikko 2](#vko2)
 * [Viikko 3](#vko3)
 * [Viikko 4](#vko4)
+* [Viikko 5](#vko5)
 
 <a name="vko1"></a>
 ### Vko 1
