@@ -272,4 +272,6 @@ Mount ja full DOM -renderöinti; Frontendin integraatiotestaus ja tehtävät 93-
 * 93 meni OK
 * 94:ssa en saanut appia renderöitymään kirjautuneella käyttäjällä. Jätin kesken/hautumaan. 
 
-Snapshot-testaus; End to end -testaus; Sovellusten tilan hallinta reduxilla 13.55-14.00
+Snapshot-testaus; End to end -testaus; Sovellusten tilan hallinta reduxilla; Redux-muistiinpanot sekä tehtävät 95-96 2 h 30 min
+
+* Hyvät tehtävät, 96:sta piti vähän pähkiä mutta onnistui
