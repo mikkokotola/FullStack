@@ -310,4 +310,4 @@ Redux-sovelluksen kommunikointi palvelimen kanssa ja tehtävät 108-110 1 h 30 m
 
 * Tehtävissä oli vaikeustaso kohdallaan ja sopivasti kertausta
 
-Asynkroniset actionit ja redux thunk
+Asynkroniset actionit ja redux thunk 22.20-

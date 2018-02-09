@@ -1,25 +1,15 @@
 import React from 'react'
-//import PropTypes from 'prop-types'
 import {anecdoteCreation} from '../reducers/anecdoteReducer'
-import { clearNotification, setNotification } from '../reducers/notificationReducer'
+import { notify } from '../reducers/notificationReducer'
 import { connect } from 'react-redux'
-import anecdoteService from '../services/anecdotes'
 
 class AnecdoteForm extends React.Component {
   addAnecdote = async (e) => {
     e.preventDefault()
-    //const content = e.target.anecdote.value
     const content = e.target.anecdote.value
     e.target.anecdote.value = ''
-    //this.props.anecdoteCreation(newAnecdoteData)
-    const newAnecdote = await anecdoteService.createNew(content)
-    this.props.anecdoteCreation(newAnecdote)
-
-    this.props.setNotification(`You created new anecdote: ${content}`)
-    setTimeout(() => {
-                  this.props.clearNotification()
-                }, 5000)
-  
+    this.props.anecdoteCreation(content)
+    this.props.notify(`You created new anecdote: ${content}`, 5)
     
   }
    render() {
@@ -34,14 +24,8 @@ class AnecdoteForm extends React.Component {
      )
    }
 }
-/* 
-AnecdoteForm.contextTypes = {
-  store: PropTypes.object
-}
-export default AnecdoteForm
- */
 
- const mapStateToProps = (state) => {
+const mapStateToProps = (state) => {
   return {
     anecdotes: state.anecdotes
   }
@@ -49,8 +33,7 @@ export default AnecdoteForm
 
 const mapDispatchToProps = {
   anecdoteCreation,
-  clearNotification, 
-  setNotification
+  notify
 }
 
 const ConnectedAnecdoteForm = connect(

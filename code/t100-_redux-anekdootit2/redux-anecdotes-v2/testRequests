@@ -1,1 +1,19 @@
 GET http://localhost:3001/anecdotes HTTP/1.1
+
+TTflgyK
+
+POST http://localhost:3001/anecdotes HTTP/1.1
+content-type: application/json
+
+{
+    "content": "Kukakuka",
+    "votes": "2"
+}
+
+PUT http://localhost:3001/anecdotes/9hdKcAQ HTTP/1.1
+content-type: application/json
+
+{
+    "content": "Kukamuka",
+    "votes": "3"
+}

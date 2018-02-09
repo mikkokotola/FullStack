@@ -4,8 +4,6 @@ const notificationReducer = (state = message, action) => {
     switch (action.type) {
         case 'UPDATE':
             return action.newMessage
-        /* case 'VOTE':
-            return `You voted ${action.content}` */
         default:
             return state
     }
@@ -18,21 +16,20 @@ export const clearNotification = () => {
     }
 }
 
-export const setNotification = (newMessage) => {
-    return {
-        type: 'UPDATE',
-        newMessage: newMessage
+export const notify = (newMessage, timeToWait) => {
+    const timeToWaitMs = 1000 * timeToWait
+    return async (dispatch) => {
+        dispatch({
+            type: 'UPDATE',
+            newMessage: newMessage
+        })
+        setTimeout(() => {
+            dispatch({
+                type: 'UPDATE',
+                newMessage: ''
+            })
+          }, timeToWaitMs)
     }
 }
 
-
-
-/* export const setNotification = (newMessage) => () => {
-    return (this.context.store.dispatch(
-        {
-            type: 'UPDATE',
-            newMessage: `You voted ${newMessage}`
-        })
-    )
-} */
 export default notificationReducer
