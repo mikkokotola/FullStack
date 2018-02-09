@@ -6,9 +6,9 @@ import anecdoteService from './services/anecdotes'
 import { anecdoteInitialization } from './reducers/anecdoteReducer'
 import App from './App'
 
-anecdoteService.getAll().then(anecdotes =>
+/* anecdoteService.getAll().then(anecdotes =>
   store.dispatch(anecdoteInitialization(anecdotes)
-))
+)) */
 
 const render = () => {
   ReactDOM.render(

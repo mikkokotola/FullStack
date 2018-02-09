@@ -306,5 +306,8 @@ Tehtävät 104-106 30 min
 
 Presentational/Container revisited ja tehtävä 107 40 min
 
-Redux-sovelluksen kommunikointi palvelimen kanssa ja tehtävät 108- 15.10-
-15.55
+Redux-sovelluksen kommunikointi palvelimen kanssa ja tehtävät 108-110 1 h 30 min
+
+* Tehtävissä oli vaikeustaso kohdallaan ja sopivasti kertausta
+
+Asynkroniset actionit ja redux thunk
