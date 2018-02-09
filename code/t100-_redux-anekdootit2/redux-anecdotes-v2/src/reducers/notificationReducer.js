@@ -1,11 +1,11 @@
-let message = 'Initial message!'
+let message = ''
 
 const notificationReducer = (state = message, action) => {
     switch (action.type) {
         case 'UPDATE':
             return action.newMessage
-        case 'VOTE':
-            return `You voted ${action.content}`
+        /* case 'VOTE':
+            return `You voted ${action.content}` */
         default:
             return state
     }
@@ -21,7 +21,18 @@ export const clearNotification = () => {
 export const setNotification = (newMessage) => {
     return {
         type: 'UPDATE',
-        newMessage
+        newMessage: `You voted ${newMessage}`
     }
 }
+
+
+
+/* export const setNotification = (newMessage) => () => {
+    return (this.context.store.dispatch(
+        {
+            type: 'UPDATE',
+            newMessage: `You voted ${newMessage}`
+        })
+    )
+} */
 export default notificationReducer

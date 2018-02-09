@@ -294,7 +294,7 @@ _Yleiskommentit viikosta_
 
 _Ajankäyttö ja tarkemmat kommentit_
 
-Muistiinpano-sovelluksen refaktorointia ja tehtävät 100- 9.05-9.35 ja 12.45-13.10 ja 15.50-16.20 ja 10.00-
+Muistiinpano-sovelluksen refaktorointia ja tehtävät 100- 9.05-9.35 ja 12.45-13.10 ja 15.50-16.20 ja 10.00-11.45 ja 12.10-12.20 ja 12.45-
 
 * Tein myös varsinaisen kurssin tehtävän 6.1 (ESLint-konfiguraatio)
 
