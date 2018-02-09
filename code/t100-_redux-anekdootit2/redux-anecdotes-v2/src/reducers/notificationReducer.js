@@ -21,7 +21,7 @@ export const clearNotification = () => {
 export const setNotification = (newMessage) => {
     return {
         type: 'UPDATE',
-        newMessage: `You voted ${newMessage}`
+        newMessage: newMessage
     }
 }
 

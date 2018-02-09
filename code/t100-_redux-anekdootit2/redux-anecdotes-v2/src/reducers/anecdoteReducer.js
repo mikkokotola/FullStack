@@ -9,7 +9,7 @@ const anecdotesAtStart = [
   'Debugging is twice as hard as writing the code in the first place. Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.'
 ]
 
-const getId = () => (100000*Math.random()).toFixed(0)
+const getId = () => (100000 * Math.random()).toFixed(0)
 
 const asObject = (anecdote) => {
   return {
@@ -21,25 +21,26 @@ const asObject = (anecdote) => {
 
 const initialState = anecdotesAtStart.map(asObject)
 
-const anecdoteReducer = (state = initialState, action) => {
-  if (action.type==='VOTE') {
-    const old = state.filter(a => a.id !==action.id)
-    const voted = state.find(a => a.id === action.id)
-    return [...old, { ...voted, votes: voted.votes+1} ]
+const anecdoteReducer = (state = [], action) => {
+  switch (action.type) {
+    case ('VOTE'):
+      const old = state.filter(a => a.id !== action.id)
+      const voted = state.find(a => a.id === action.id)
+      return [...old, { ...voted, votes: voted.votes + 1 }]
+    case ('CREATE'):
+      return [...state, { content: action.data.content, id: action.data.id, votes: action.data.votes }]
+    case ('INIT_ANECDOTES'):
+      return action.data
+    default:
+      return state
   }
-  if (action.type === 'CREATE') {
-
-    return [...state, { content: action.content, id: getId(), votes:0 }]
-  }
-
-  return state
 }
 
-export const anecdoteCreation = (content) => {
+export const anecdoteCreation = (newAnecdoteData) => {
   return {
-    type: 'NEW_NOTE',
+    type: 'CREATE',
     data: {
-      content,
+      content: newAnecdoteData.content,
       id: getId(),
       votes: 0
     }
@@ -51,6 +52,13 @@ export const anecdoteVoting = (id, content) => {
     type: 'VOTE',
     id,
     content
+  }
+}
+
+export const anecdoteInitialization = (data) => {
+  return {
+    type: 'INIT_ANECDOTES',
+    data
   }
 }
 

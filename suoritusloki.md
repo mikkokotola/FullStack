@@ -294,8 +294,17 @@ _Yleiskommentit viikosta_
 
 _Ajankäyttö ja tarkemmat kommentit_
 
-Muistiinpano-sovelluksen refaktorointia ja tehtävät 100- 9.05-9.35 ja 12.45-13.10 ja 15.50-16.20 ja 10.00-11.45 ja 12.10-12.20 ja 12.45-
+Muistiinpano-sovelluksen refaktorointia ja tehtävät 100-103 3 h 50 min
 
 * Tein myös varsinaisen kurssin tehtävän 6.1 (ESLint-konfiguraatio)
 
-* 
+* Tein tässä jo samalla Providerin käytön sovellukseeni
+
+Connect 10 min
+
+Tehtävät 104-106 30 min
+
+Presentational/Container revisited ja tehtävä 107 40 min
+
+Redux-sovelluksen kommunikointi palvelimen kanssa ja tehtävät 108- 15.10-
+15.55

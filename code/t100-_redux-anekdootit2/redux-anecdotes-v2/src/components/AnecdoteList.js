@@ -1,24 +1,15 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+//import PropTypes from 'prop-types'
 import { anecdoteVoting } from '../reducers/anecdoteReducer'
 import { clearNotification, setNotification } from '../reducers/notificationReducer'
+import { connect } from 'react-redux'
 
 class AnecdoteList extends React.Component {
   render() {
-    const anecdotesToShow = () => {
-      const { anecdotes, filter } = this.context.store.getState()
-      if (filter === 'ALL') {
-        return anecdotes
-      }
-
-      return anecdotes.filter(anecd => anecd.content.toLowerCase().includes(filter.toLowerCase()))
-    }
-
-    //const anecdotes = this.context.store.getState().anecdotes
     return (
       <div>
         <h2>Anecdotes</h2>
-        {anecdotesToShow().sort((a, b) => b.votes - a.votes).map(anecdote =>
+        {this.props.visibleAnecdotes.sort((a, b) => b.votes - a.votes).map(anecdote =>
           <div key={anecdote.id}>
             <div>
               {anecdote.content}
@@ -26,10 +17,10 @@ class AnecdoteList extends React.Component {
             <div>
               has {anecdote.votes}
               <button onClick={() => {
-                this.context.store.dispatch(anecdoteVoting(anecdote.id, anecdote.content))
-                this.context.store.dispatch(setNotification(anecdote.content))
+                this.props.anecdoteVoting(anecdote.id, anecdote.content)
+                this.props.setNotification(`You voted ${anecdote.content}`)
                 setTimeout(() => {
-                  this.context.store.dispatch(clearNotification())
+                  this.props.clearNotification()
                 }, 5000)
               }
               
@@ -44,8 +35,30 @@ class AnecdoteList extends React.Component {
   }
 }
 
-AnecdoteList.contextTypes = {
-  store: PropTypes.object
+const anecdotesToShow = (anecdotes, filterForAnect) => {
+  //const { anecdotes, filter } = this.props
+  if (filterForAnect === 'ALL') {
+    return anecdotes
+  }
+
+  return anecdotes.filter(anecd => anecd.content.toLowerCase().includes(filterForAnect.toLowerCase()))
 }
 
-export default AnecdoteList
+const mapStateToProps = (state) => {
+  return {
+    visibleAnecdotes: anecdotesToShow(state.anecdotes, state.filter)
+  }
+}
+
+const mapDispatchToProps = {
+  anecdoteVoting,
+  clearNotification, 
+  setNotification
+}
+
+const ConnectedAnecdoteList = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(AnecdoteList)
+
+export default ConnectedAnecdoteList

@@ -1,10 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+//import PropTypes from 'prop-types'
+import {connect} from 'react-redux'
 
 class Notification extends React.Component {
   render() {
     const notificationToShow = () => {
-      const notif = this.context.store.getState().notification
+      const notif = this.props.notification
       return notif === '' ?
         <div></div> :
         <div style={style}>
@@ -17,13 +18,24 @@ class Notification extends React.Component {
       borderWidth: 1
     }
     return notificationToShow()
-
-
   }
 }
 
-Notification.contextTypes = {
+/* Notification.contextTypes = {
   store: PropTypes.object
+} */
+
+//export default Notification
+
+const mapStateToProps = (state) => {
+  return {
+    notification: state.notification
+  }
 }
 
-export default Notification
+const ConnectedNotification = connect(
+  mapStateToProps
+)(Notification)
+
+export default ConnectedNotification
+
