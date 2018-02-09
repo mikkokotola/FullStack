@@ -8,6 +8,7 @@ Mikko Kotola
 * [Viikko 3](#vko3)
 * [Viikko 4](#vko4)
 * [Viikko 5](#vko5)
+* [Viikko 6](#vko6)
 
 <a name="vko1"></a>
 ### Vko 1
@@ -284,3 +285,17 @@ Lisää toiminnallisuutta ja ei-kontrolloitu lomake; action creatorit; staten v�
 
 * Tehtävät onnistuivat ja olivat vaikeustasoltaan sopivia
 
+<a name="vko6"></a>
+### Vko 6
+
+Ajankäyttö yhteensä: KESKEN
+
+_Yleiskommentit viikosta_
+
+_Ajankäyttö ja tarkemmat kommentit_
+
+Muistiinpano-sovelluksen refaktorointia ja tehtävät 100- 9.05-9.35 ja 12.45-13.10 ja 15.50-16.20 ja 10.00-
+
+* Tein myös varsinaisen kurssin tehtävän 6.1 (ESLint-konfiguraatio)
+
+* 
