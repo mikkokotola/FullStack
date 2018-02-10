@@ -314,3 +314,13 @@ Asynkroniset actionit ja redux thunk sekä tehtävät 111-113 50 min
 
 * Tehtävät tuntuivat jälleen juuri sopivan haastavilta
 
+React router ja tehtävät 114-116 1 h 30 min
+
+Inline-tyylit ja tehtävät 117-118 30 min
+
+22.05-
+
+
+
+
+
