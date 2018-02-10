@@ -1,5 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Link, NavLink, Redirect } from 'react-router-dom'
+import { Navbar, Nav, NavItem, Alert, ListGroup, ListGroupItem, Grid, Row, Col, FormGroup, FormControl, ControlLabel, Button } from 'react-bootstrap'
+import axios from 'axios'
+
 
 const SingleAnecdote = ({ anecdote }) => (
   <div>
@@ -12,25 +15,40 @@ const SingleAnecdote = ({ anecdote }) => (
 const AnecdoteList = ({ anecdotes }) => (
   <div>
     <h2>Anecdotes</h2>
-    <ul>
-      {anecdotes.map(anecdote => <li key={anecdote.id} > <Link to={`/anecdotes/${anecdote.id}`} >{anecdote.content}</Link></li>)}
-    </ul>
+    <ListGroup>
+      {anecdotes.map(anecdote => <ListGroupItem key={anecdote.id} > <Link to={`/anecdotes/${anecdote.id}`} >{anecdote.content}</Link></ListGroupItem>)}
+    </ListGroup>
   </div>
 )
 
-const About = () => (
-  <div>
-    <h2>About anecdote app</h2>
-    <p>According to Wikipedia:</p>
+const About = () => {
+  const imgStyle = {
+    maxWidth: '100%',
+    height: 'auto'
+  }
+  return (
+    <div>
+      <h2>About anecdote app</h2>
+      <Grid>
+        <Row className="show-grid">
+          <Col sm={6} md={6} lg={6}>
 
-    <em>An anecdote is a brief, revealing account of an individual person or an incident.
+            <p>According to Wikipedia:</p>
+
+            <em>An anecdote is a brief, revealing account of an individual person or an incident.
       Occasionally humorous, anecdotes differ from jokes because their primary purpose is not simply to provoke laughter but to reveal a truth more general than the brief tale itself,
       such as to characterize a person by delineating a specific quirk or trait, to communicate an abstract idea about a person, place, or thing through the concrete details of a short narrative.
       An anecdote is "a story with a point."</em>
 
-    <p>Software engineering is full of excellent anecdotes, at this app you can find the best and add more.</p>
-  </div>
-)
+            <p>Software engineering is full of excellent anecdotes, at this app you can find the best and add more.</p>
+          </Col>
+          <Col sm={6} md={6} lg={6}>
+            <img style={imgStyle} id='Dijkstra' src='https://upload.wikimedia.org/wikipedia/commons/d/d9/Edsger_Wybe_Dijkstra.jpg' />
+          </Col>
+        </Row>
+      </Grid>
+    </div>)
+}
 
 const Footer = () => (
   <div>
@@ -76,19 +94,16 @@ class CreateNew extends React.Component {
       <div>
         <h2>create a new anecdote</h2>
         <form onSubmit={this.handleSubmit}>
-          <div>
-            content
-            <input name='content' value={this.state.content} onChange={this.handleChange} />
-          </div>
-          <div>
-            author
-            <input name='author' value={this.state.author} onChange={this.handleChange} />
-          </div>
-          <div>
-            url for more info
-            <input name='info' value={this.state.info} onChange={this.handleChange} />
-          </div>
-          <button>create</button>
+          <FormGroup>
+            <ControlLabel>content</ControlLabel>
+            <FormControl name='content' value={this.state.content} onChange={this.handleChange} />
+            <ControlLabel>author</ControlLabel>
+            <FormControl name='author' value={this.state.author} onChange={this.handleChange} />
+            <ControlLabel>url for more info</ControlLabel>
+            <FormControl name='info' value={this.state.info} onChange={this.handleChange} />
+
+            <Button bsStyle='success' type='submit'>create</Button>
+          </FormGroup>
         </form>
       </div>
     )
@@ -147,30 +162,33 @@ class App extends React.Component {
   }
 
   render() {
-    const menuStyle = {
-      fontSize: 14,
-      padding: 10,
-      backgroundColor: 'lightblue'
-    }
     return (
-      <div>
+      <div className='container'>
         <Router>
           <div>
-            <h1>Software anecdotes</h1>
+            <Navbar inverse collapseOnSelect>
+              <Navbar.Header>
+                <Navbar.Brand>
+                  Software anecdotes
+                </Navbar.Brand>
+                <Navbar.Toggle />
+              </Navbar.Header>
+              <Navbar.Collapse>
+                <Nav>
+                  <NavItem href='#'>
+                    <Link to="/">Anecdotes</Link>
+                  </NavItem>
+                  <NavItem href='#'>
+                    <Link to="/create">Create new</Link>
+                  </NavItem>
+                  <NavItem href='#'>
+                    <Link to="/about">About</Link>
+                  </NavItem>
+                </Nav>
+              </Navbar.Collapse>
+            </Navbar>
+
             <Notification state={this.state} />
-
-            <div style={menuStyle}>
-              <NavLink exact to="/" activeStyle={{
-                fontWeight: 'bold'
-              }}>anecdotes</NavLink> &nbsp;
-              <NavLink exact to="/create" activeStyle={{
-                fontWeight: 'bold'
-              }}>create new</NavLink> &nbsp;
-              <NavLink exact to="/about" activeStyle={{
-                fontWeight: 'bold'
-              }}>about</NavLink>
-
-            </div>
             <Route exact path="/" render={() => <AnecdoteList anecdotes={this.state.anecdotes} />} />
             <Route path="/create" render={({ history }) => <CreateNew addNew={this.addNew} history={history} setNotification={this.setNotification} />} />
             <Route path="/about" render={() => <About />} />
@@ -199,7 +217,12 @@ const Notification = ({ state }) => {
   if (state.notification === '') {
     return (<div></div>)
   } else {
-    return (<div style={notificationStyle}>{state.notification}</div>)
+    return (
+      state.notification &&
+      <Alert color="success">
+        {state.notification}
+      </Alert>
+    )
   }
 }
 

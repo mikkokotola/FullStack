@@ -288,9 +288,15 @@ Lisää toiminnallisuutta ja ei-kontrolloitu lomake; action creatorit; staten v�
 <a name="vko6"></a>
 ### Vko 6
 
-Ajankäyttö yhteensä: KESKEN
+Ajankäyttö yhteensä: 10 h 40 min
 
 _Yleiskommentit viikosta_
+
+* Tuntui jonkin verran helpommalta kuin viikot 4 ja 5
+
+* Tehtävät tuntuivat vaikeustasoltaan sopivilta (haastavilta mutta ei mahdottomilta)
+
+* UI-frameworkit oli tärkeää käydä läpi
 
 _Ajankäyttö ja tarkemmat kommentit_
 
@@ -318,7 +324,12 @@ React router ja tehtävät 114-116 1 h 30 min
 
 Inline-tyylit ja tehtävät 117-118 30 min
 
-22.05-
+Valmiit käyttöliittymätyylikirjastot ja tehtävät 119-121 1 h 10 min
+
+* Tein viimeisestä (121) varsinaisen kurssin 6.23 mukaisen version
+
+* UI-frameworkit olivat hyvää ja tärkeää sisältöä - kyllä se ulkoasu vain paljon ratkaisee
+
 
 
 
