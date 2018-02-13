@@ -12,11 +12,12 @@ Mikko Kotola
 * [Viikko 7](#vko7)
 
 ### Koko kurssi
-Ajankäyttö yhteensä: x h x min
+Ajankäyttö yhteensä: 88 h 20 min
 
-Kesken jääneet tehtävät: 33, 79, 92, 94
+Kesken jääneet tehtävät viikoilla 1-6: 33, 79, 92, 94
+Viikolla 7 tehdyt tehtävät: 122, 126, 129, 134, 140
 
-Tehtyjen tehtävien lukumäärä: /143
+Tehtyjen tehtävien lukumäärä: 122/143 (arvosanamaksimi 140 tehtävää)
 
 <a name="vko1"></a>
 ### Vko 1
