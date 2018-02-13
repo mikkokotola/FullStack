@@ -9,6 +9,14 @@ Mikko Kotola
 * [Viikko 4](#vko4)
 * [Viikko 5](#vko5)
 * [Viikko 6](#vko6)
+* [Viikko 7](#vko7)
+
+### Koko kurssi
+Ajankäyttö yhteensä: x h x min
+
+Kesken jääneet tehtävät: 33, 79, 92, 94
+
+Tehtyjen tehtävien lukumäärä: /143
 
 <a name="vko1"></a>
 ### Vko 1
@@ -330,8 +338,35 @@ Valmiit käyttöliittymätyylikirjastot ja tehtävät 119-121 1 h 10 min
 
 * UI-frameworkit olivat hyvää ja tärkeää sisältöä - kyllä se ulkoasu vain paljon ratkaisee
 
+<a name="vko7"></a>
+### Vko 7
 
+Ajankäyttö yhteensä: 6 h 50 min
 
+_Yleiskommentit viikosta_
 
+* Materiaalissa oli paljon asiaa. Materiaali oli kuitenkin helppolukuista ja selkeää. Luonnollisesti aika monen asian käsittely oli pintapuolista.
 
+* Lähdin tekemään redux-refaktorointia, mutta totesin tehtävän niin vaikeaksi ja työlääksi, että lopetin 1 h 30 min jälkeen ja keskityin muihin tehtäviin. En löytänyt sopivia pieniä väliaskeleita refaktorointiin.
 
+* Vähän alkoi jos turnausväsymystä ilmetä, joten tyydyin tekemään vai pienen osan viimeisen viikon tehtävistä (5/19). 
+
+_Ajankäyttö ja tarkemmat kommentit_
+
+Viikon 7 koko materiaalin lukeminen 2 h
+Webpack; Lisää tyyleistä; Sovelluksen end to end -testaus; Tyypitys; Muutamia huomioita liittyen Reactiin, Reduxiin ja Nodeen; React/node-sovellusten tietoturva; Tulevaisuuden trendit; Hyödyllisiä kirjastoja ja mielenkiintoisia linkkejä
+
+* Luin [Flux-arkkitehtuurilinkin] (https://facebook.github.io/flux/docs/in-depth-overview.html#content) takaa löytyvän sivun - se tuki erinomaisesti kokonaiskuvan muodostamista/kertaamista koko Reactista.
+
+* Yritin asentaa nsp:tä, mutta en saanut toimimaan
+
+Tehtäviin käytetty aika yhteensä: 4 h 50 min
+Tehtävien katsominen ja valinta, npm-pakkausten asennus
+Tehdyt tehtävät:
+T134 ESLint
+T126 navigointi
+T129 tyylit, osa1
+T140 Tyyppitarkastuksia
+122 Käyttäjien näkymä
+
+Lähdin tekemään redux-refaktorointia, mutta totesin tehtävän niin vaikeaksi ja työlääksi, että lopetin 1 h 30 min jälkeen
